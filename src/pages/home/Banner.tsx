@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { default as banner1, default as banner2, default as banner3 } from "../../assets/banner-logo/Banner3.png";
+
+import BannerImg from "../../assets/banner/Banner.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,7 +14,7 @@ import 'swiper/css/pagination';
 const slides = [
   {
     id: 1,
-    image: banner1,
+    image: BannerImg,
     title: "Fresh & Healthy",
     subtitle: "Organic Food",
     discount: "30% OFF",
@@ -22,7 +23,7 @@ const slides = [
   },
   {
     id: 2,
-    image: banner2,
+    image: BannerImg,
     title: "Fresh & Healthy",
     subtitle: "Organic Food",
     discount: "30% OFF",
@@ -31,7 +32,7 @@ const slides = [
   },
   {
     id: 3,
-    image: banner3,
+    image: BannerImg,
     title: "Fresh & Healthy",
     subtitle: "Organic Food",
     discount: "30% OFF",
@@ -86,19 +87,19 @@ const Banner = () => {
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className="flex flex-col items-center justify-between gap-10 px-6 md:flex-row md:px-20 py-14 md:py-20">
-                <div className="flex justify-center w-full md:w-1/2">
+              <div className="flex flex-col items-center justify-between gap-10 px-4 lg:flex-row md:px-20 py-14 md:py-20">
+                <div className="flex justify-center w-full lg:w-1/2">
                   <img
                     src={slide.image}
                     alt={`Slide ${slide.id}`}
                     className="object-contain w-full  drop-shadow-md"
                   />
                 </div>
-                <div className="w-full space-y-5  text-center md:w-1/2 md:text-left">
+                <div className="w-full space-y-5  text-center lg:w-1/2 md:text-left">
                   <h4 className="font-semibold tracking-wide text-green-600 uppercase ">
                     Welcome to Shopery
                   </h4>
-                  <h1 className="text-4xl font-extrabold leading-snug text-gray-900 md:text-6xl  ">
+                  <h1 className="text-4xl font-extrabold leading-snug text-gray-900 md:text-6xl lg:text-5xl xl:text-6xl  ">
                     {slide.title} <br />
                     <span className="text-black">{slide.subtitle}</span>
                   </h1>
@@ -126,7 +127,7 @@ const Banner = () => {
         <button className="custom-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 bg-white border border-green-500 p-2 rounded-full text-green-600 hover:bg-green-100 shadow-md">
           <FaChevronLeft />
         </button>
-        <button className="custom-next absolute top-1/2 right-4 -translate-y-1/2 z-10 bg-white border border-green-500 p-2 rounded-full text-green-600 hover:bg-green-100 shadow-md">
+        <button className="custom-next absolute top-1/2 right-4 lg:right-3 xl:right-1 -translate-y-1/2 z-10 bg-white border border-green-500 p-2 rounded-full text-green-600 hover:bg-green-100 shadow-md">
           <FaChevronRight />
         </button>
 

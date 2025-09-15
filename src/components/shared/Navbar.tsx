@@ -2,55 +2,105 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegHeart, FaRegUser } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoSearch } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
+import NavLogo from "../../assets/navLogo/plant.png"
 
 const Navbar = () => {
-    const link = (
+    const links = (
         <>
             <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        `hover:text-green-600 transition duration-300 ease-in-out text-base px-2 py-1 ${isActive
+                            ? "text-green-600 font-semibold border-b-2 border-green-600 rounded"
+                            : "text-gray-700"
+                        }`
+                    }
+                >
+                    Home
+                </NavLink>
             </li>
             <li>
-                <Link to="/shop">Shopping</Link>
+                <NavLink
+                    to="/shop"
+                    className={({ isActive }) =>
+                        `hover:text-green-600 transition duration-300 ease-in-out text-base px-2 py-1 ${isActive
+                            ? "text-green-600 font-semibold border-b-2 border-green-600 rounded"
+                            : "text-gray-700"
+                        }`
+                    }
+                >
+                    Shop
+                </NavLink>
             </li>
             <li>
-                <Link to="/Blog">Blog</Link>
+                <NavLink
+                    to="/Blog"
+                    className={({ isActive }) =>
+                        `hover:text-green-600 transition duration-300 ease-in-out text-base px-2 py-1 ${isActive
+                            ? "text-green-600 font-semibold border-b-2 border-green-600 rounded"
+                            : "text-gray-700"
+                        }`
+                    }
+                >
+                    Blog
+                </NavLink>
             </li>
             <li>
-                <Link to="/about">About Us</Link>
+                <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                        `hover:text-green-600 transition duration-300 ease-in-out text-base px-2 py-1 ${isActive
+                            ? "text-green-600 font-semibold border-b-2 border-green-600 rounded"
+                            : "text-gray-700"
+                        }`
+                    }
+                >
+                    About Us
+                </NavLink>
             </li>
             <li>
-                <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-                <Link to="/dashboard">Dashboard</Link>
+                <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                        `hover:text-green-600 transition duration-300 ease-in-out text-base px-2 py-1 ${isActive
+                            ? "text-green-600 font-semibold border-b-2 border-green-600 rounded"
+                            : "text-gray-700"
+                        }`
+                    }
+                >
+                    Contact
+                </NavLink>
             </li>
         </>
     );
 
     return (
-        <>
+        <div className="sticky top-0 !z-50">
             <header>
                 <TopBar />
             </header>
 
-            <div className="bg-transparent backdrop-blur-3xl sticky top-0 !z-50 border-b border-gray-100 ">
+            <nav className="bg-white backdrop-blur-3xl  border-b border-gray-100 px-4">
                 <div className="container mx-auto  ">
                     {/* ==== Mobile & Tablet Navbar ==== */}
-                    <div className="navbar  px-4 py-2 lg:hidden flex justify-between items-center">
+                    <div className="navbar py-4 lg:hidden flex justify-between items-center">
                         {/* Logo Center */}
                         <div className="flex-1 flex  ">
                             <Link
                                 to="/"
                                 className="text-2xl font-bold text-green-500 flex items-center"
                             >
-                                <span className="mr-2">🌱</span> Online Bazar
+                                <div className="flex ">
+                                    <span className="mr-2">{<img src={NavLogo} alt="Logo..." />}</span> Online Bazar
+                                </div>
                             </Link>
                         </div>
 
                         {/* Hamburger Menu (Right Side) */}
-                        <div className="dropdown dropdown-end">
+                        <div className="dropdown dropdown-end border rounded">
                             <button tabIndex={0} className="btn btn-ghost">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +124,7 @@ const Navbar = () => {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-60"
                             >
                                 {/* Menu Items */}
-                                {link}
+                                {links}
 
                                 {/* Icons in Dropdown */}
                                 <div className="flex justify-around pt-4 border-t mt-2">
@@ -89,22 +139,25 @@ const Navbar = () => {
                     </div>
 
                     {/* ==== Desktop Navbar Layout ==== */}
-                    <div className="hidden lg:flex justify-between items-center  py-3">
+                    <div className="hidden lg:flex justify-between items-center py-5 xl:px-4">
                         {/* Left: Navigation Menu */}
-                        <ul className="menu menu-horizontal space-x-4 text-gray-700">
-                            {link}
+                        <ul className="flex items-center space-x-8 text-gray-700">
+                            {links}
                         </ul>
 
                         {/* Center: Logo */}
                         <div className="text-2xl font-bold text-green-500 flex items-center">
                             <Link to={"/"}>
                                 {" "}
-                                <span className="mr-2">🌱</span> Online Bazar
+                                {/* <span className="mr-2">🌱</span> Online Bazar */}
+                                <div className="flex ">
+                                    <span className="mr-2">{<img src={NavLogo} alt="Logo..." />}</span> Online Bazar
+                                </div>
                             </Link>
                         </div>
 
                         {/* Right: Icons */}
-                        <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-6 text-gray-700">
                             <div className="flex items-center hover:text-green-500">
                                 <FiPhoneCall className="text-2xl" />
                                 <span className="ml-2 hidden xl:inline">(219) 555-0114</span>
@@ -128,8 +181,8 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
+            </nav>
+        </div>
     );
 };
 

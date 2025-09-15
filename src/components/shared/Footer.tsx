@@ -10,7 +10,7 @@ import {
     FaTwitter,
 } from "react-icons/fa";
 import footerBg from "../../assets/footer/FooterBg.png";
-import footerLogo from "../../assets/footer/footerLogo.png";
+import footerLogo from "../../assets/footer/plant.png";
 import masterCardLogo from "../../assets/footer/Mastercard.png";
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="md:col-span-1">
                     <h2 className="flex items-center gap-2 text-white text-2xl font-bold mb-4">
                         <img src={footerLogo} alt="Logo" className="h-8 w-8" />
-                        Ecobazar
+                        Online Bazar
                     </h2>
                     <p className="text-sm leading-relaxed mb-6">
                         Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis

@@ -5,19 +5,19 @@ import { Link } from "react-router-dom";
 
 const TrustedFood = () => {
     return (
-        <section className="bg-white py-16">
-            <div className="flex flex-col lg:flex-row items-center gap-10  px-4 container mx-auto">
+        <section className="bg-white py-16 ">
+            <div className="flex flex-col lg:flex-row items-center gap-10 px-4 container mx-auto">
                 {/* Left Images */}
-                <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-1/2 justify-center">
+                <div className="flex gap-6 w-full lg:w-1/2 justify-center">
                     <img
                         src={Man2}
                         alt="Farmer with apples"
-                        className="w-full sm:w-1/2 h-72 md:h-80 lg:h-96 rounded-lg object-cover shadow-lg"
+                        className="w-1/2 sm:h-72 md:h-80 lg:h-96 rounded-lg object-cover shadow-lg"
                     />
                     <img
                         src={Man1}
                         alt="Man with basket"
-                        className="w-full sm:w-1/2 h-72 md:h-80 lg:h-96 rounded-lg object-cover shadow-lg"
+                        className="w-1/2 sm:h-72 md:h-80 lg:h-96 rounded-lg object-cover shadow-lg"
                     />
                 </div>
 

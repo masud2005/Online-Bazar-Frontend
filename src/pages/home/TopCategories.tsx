@@ -28,7 +28,7 @@ const categories = [
 
 const TopCategories = () => {
     return (
-        <section className="w-full bg-gradient-to-b from-[#6de4711a] to-white">
+        <section className="w-full">
             <div className="py-12 px-4 container mx-auto">
                 {/* Header */}
                 <div className="flex justify-between items-center my-10">

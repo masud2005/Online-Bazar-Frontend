@@ -1,12 +1,11 @@
-import { Button } from '@/components/ui/button';
+import Navbar from '@/components/shared/Navbar';
 import { Outlet } from 'react-router';
 
 const MainLayout = () => {
     return (
         <div>
-            <Button>Navbar</Button>
+            <Navbar />
             <Outlet />
-            <h1>Footer</h1>
         </div>
     );
 };

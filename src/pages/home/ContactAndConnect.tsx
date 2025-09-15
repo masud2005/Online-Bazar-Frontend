@@ -47,7 +47,7 @@ const ContactAndConnect = () => {
                 </div>
 
                 {/* Phone Card */}
-                <div className="border border-green-100 rounded-lg p-6 shadow-sm flex flex-col items-center bg-gray-50 transition duration-300 hover:shadow-lg hover:border-green-500 hover:scale-105">
+                <div className="border border-green-200 rounded-lg p-6 shadow-sm flex flex-col items-center bg-gray-50 transition duration-300 hover:shadow-lg hover:border-green-500 hover:scale-105">
                     <FaPhone className="text-3xl text-green-500 mb-3" />
                     <p className="text-xs uppercase font-bold text-gray-700 mb-2">
                         Call us 24/7
@@ -56,7 +56,7 @@ const ContactAndConnect = () => {
                 </div>
 
                 {/* Newsletter Card */}
-                <div className="border border-green-100 rounded-lg p-6 shadow-sm bg-gray-50 transition duration-300 hover:shadow-lg hover:border-green-500 hover:scale-105">
+                <div className="border border-green-200 rounded-lg p-6 shadow-sm bg-gray-50 transition duration-300 hover:shadow-lg hover:border-green-500 hover:scale-105">
                     <div className="flex flex-col items-center mb-4">
                         <FaEnvelope className="text-3xl text-green-500 mb-3" />
                         <p className="text-xs uppercase font-bold text-gray-700">

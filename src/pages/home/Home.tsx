@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import BestSellerProducts from "./BestSellerProducts";
 import Blog from "./Blog";
+import ContactAndConnect from "./ContactAndConnect";
 import FeaturedProducts from "./FeaturedProducts";
 import PromoAndCountDownBanner from "./PromoAndCountDownBanner";
 import Review from "./Review";
@@ -24,6 +25,7 @@ const Home = () => {
             </div>
             <Blog />
             <Testimonials />
+            <ContactAndConnect />
         </div>
     );
 };
